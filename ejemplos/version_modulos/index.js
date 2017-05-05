@@ -35,6 +35,13 @@ function versionModulos(callback) {
     // devolvemos la lista de modulos
     async.concat(lista, iterador, callback);
 
+    // para hacer bucles que en su interior hagan cosas asíncronas
+    // como por ejemplo trabajar con ficheros o la red,
+    // NO usar bucles como estos:
+    //  while() {...}
+    //  for (var i = 0;...)
+    //  lista.forEach(item => {      // no es asincrono
+
   })
 }
 
