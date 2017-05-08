@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 // ficheros estáticos:
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'otropublic')));
+// app.use('/otraruta', express.static(path.join(__dirname, 'otropublic')));
 
 app.use((req, res, next) => {
   console.log('soy un middleware, y estoy evaluando la petición', req.originalUrl);
@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 
 // Rutas de nuestra aplicación
 app.use('/', require('./routes/index'));
-app.use('/users', require('./routes/users'));
+// app.use('/users', require('./routes/users'));
 // ...
 
 
